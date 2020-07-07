@@ -1,8 +1,7 @@
-
 package dominio;
 
-public abstract class Producto {
-    
+public abstract class Producto implements Comparable<Producto> {
+
     private String nombre;
     private Double precio;
 
@@ -10,8 +9,6 @@ public abstract class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
-    
-    public abstract void mostrarInformacionProducto();
 
     public String getNombre() {
         return nombre;
@@ -20,9 +17,16 @@ public abstract class Producto {
     public Double getPrecio() {
         return precio;
     }
-    
-    
-    
-    
-    
+
+    @Override
+    public int compareTo(Producto otroProducto) {
+        if (this.precio < otroProducto.precio) {
+            return -1; //es mas barato
+        }
+        if (this.precio > otroProducto.precio) {
+            return 1; //es mas caro
+        }
+        return 0;
+    }
+
 }
