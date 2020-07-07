@@ -21,10 +21,10 @@ public abstract class Producto implements Comparable<Producto> {
     @Override
     public int compareTo(Producto otroProducto) {
         if (this.precio < otroProducto.precio) {
-            return -1; //es mas barato
+            return -1; //producto es mas barato que otroProducto
         }
         if (this.precio > otroProducto.precio) {
-            return 1; //es mas caro
+            return 1; //producto es mas caro que otroProducto
         }
         return 0;
     }
