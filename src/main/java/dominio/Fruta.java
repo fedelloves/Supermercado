@@ -1,12 +1,12 @@
 
 package dominio;
 
-public class Higiene {
+
+public class Fruta {
     
     private String nombre;
-    private Double contenido;
     private Double precio;
-    
+    private String unidadDeVenta;
     
     
     
