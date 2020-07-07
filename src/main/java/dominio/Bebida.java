@@ -1,33 +1,28 @@
 
 package dominio;
 
-public class Bebida {
+public class Bebida extends Producto {
     
-    private String nombre;
     private Double litros;
-    private Double precio;
 
-    public Bebida(String nombre, Double litros, Double precio) {
-        this.nombre = nombre;
+    public Bebida(String nombre, Double litros, Double precio){
+        super(nombre, precio);
         this.litros = litros;
-        this.precio = precio;
     }
 
-    public String getNombre() {
-        return nombre;
+    @Override
+    public void mostrarInformacionProducto() {
+        System.out.println("Nombre: " + this.getNombre() + " /// Litros: " + this.getLitros() + " /// Precio: $" + this.getPrecio());
     }
 
     public Double getLitros() {
         return litros;
     }
+    
+    
+    
+    
 
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
     
     
     

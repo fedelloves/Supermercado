@@ -1,11 +1,26 @@
 
 package dominio;
 
-public class Higiene {
+public class Higiene extends Producto {
     
-    private String nombre;
     private Double contenido;
-    private Double precio;
+            
+    public Higiene(String nombre, double contenido, double precio){
+        super(nombre, precio);
+        this.contenido = contenido;
+    }
+
+    @Override
+    public void mostrarInformacionProducto() {
+        System.out.println("Nombre: " + this.getNombre() + " /// Contenido: " + this.getContenido() + "ml /// Precio: $" + this.getPrecio());
+    }
+
+    public Double getContenido() {
+        return contenido;
+    }
+    
+    
+
     
     
     
